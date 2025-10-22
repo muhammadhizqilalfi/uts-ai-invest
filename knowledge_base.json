@@ -25,44 +25,28 @@
     "CF": 0.9
   },
   "R6": {
-    "IF": ["profil_agresif", "tujuan_jangka_panjang"],
-    "THEN": "diversifikasi_ke_saham_domestik_dan_internasional",
+    "IF": ["profil_agresif", "tujuan_jangka_panjang", "usia_muda_<30"],
+    "THEN": "alokasi_fokus_pada_saham_dengan_diversifikasi_minimal",
     "CF": 0.9
   },
   "R7": {
-    "IF": ["profil_moderat", "tujuan_jangka_menengah"],
-    "THEN": "diversifikasi_antara_saham_dan_obligasi",
+    "IF": ["profil_moderat", "tujuan_jangka_panjang", "usia_dewasa_30_50"],
+    "THEN": "alokasi_seimbang_pada_saham_dan_obligasi_dengan_porsi_menengah",
     "CF": 0.85
   },
   "R8": {
-    "IF": ["profil_konservatif", "tujuan_jangka_pendek"],
-    "THEN": "diversifikasi_pada_obligasi_dan_deposito",
+    "IF": ["profil_konservatif", "tujuan_jangka_pendek", "usia_lanjut_>50"],
+    "THEN": "alokasi_fokus_pada_obligasi_dan_deposito_untuk_keamanan_modal",
     "CF": 0.95
   },
   "R9": {
-    "IF": ["profil_agresif", "pendapatan_tinggi"],
-    "THEN": "alokasikan_sebagian_portofolio_ke_aset_alternatif_seperti_emas_atau_reksa_dana_internasional",
+    "IF": ["profil_agresif", "tujuan_jangka_pendek", "usia_muda_<30"],
+    "THEN": "alokasi_masih_dapat_diarahkan_ke_saham_dengan_porsi_terbatas",
     "CF": 0.8
   },
   "R10": {
-    "IF": ["profil_agresif", "tujuan_jangka_panjang", "toleransi_risiko_tinggi"],
-    "THEN": "alokasi_pada_instrumen_berisiko_tinggi_dengan_potensi_return_besar",
-    "CF": 0.9
-  },
-  "R11": {
-    "IF": ["profil_moderat", "toleransi_risiko_sedang"],
-    "THEN": "alokasi_pada_portofolio_seimbang_antara_saham_dan_obligasi",
-    "CF": 0.85
-  },
-  "R12": {
-    "IF": ["profil_konservatif", "toleransi_risiko_rendah"],
-    "THEN": "alokasi_pada_investasi_rendah_risiko_dengan_return_stabil",
-    "CF": 0.95
-  },
-  "R13": {
-    "IF": ["profil_agresif", "pendapatan_tinggi", "pengalaman_investasi_tinggi"],
-    "THEN": "alokasi_lebih_besar_pada_saham_dan_reksa_dana_saham",
+    "IF": ["profil_moderat", "tujuan_jangka_panjang", "usia_lanjut_>50"],
+    "THEN": "alokasi_lebih_besar_pada_obligasi_dan_reksadana_pendapatan_tetap",
     "CF": 0.9
   }
 }
-
