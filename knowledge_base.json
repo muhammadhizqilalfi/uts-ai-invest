@@ -43,6 +43,26 @@
     "IF": ["profil_agresif", "pendapatan_tinggi"],
     "THEN": "alokasikan_sebagian_portofolio_ke_aset_alternatif_seperti_emas_atau_reksa_dana_internasional",
     "CF": 0.8
+  },
+  "R10": {
+    "IF": ["profil_agresif", "tujuan_jangka_panjang", "toleransi_risiko_tinggi"],
+    "THEN": "alokasi_pada_instrumen_berisiko_tinggi_dengan_potensi_return_besar",
+    "CF": 0.9
+  },
+  "R11": {
+    "IF": ["profil_moderat", "toleransi_risiko_sedang"],
+    "THEN": "alokasi_pada_portofolio_seimbang_antara_saham_dan_obligasi",
+    "CF": 0.85
+  },
+  "R12": {
+    "IF": ["profil_konservatif", "toleransi_risiko_rendah"],
+    "THEN": "alokasi_pada_investasi_rendah_risiko_dengan_return_stabil",
+    "CF": 0.95
+  },
+  "R13": {
+    "IF": ["profil_agresif", "pendapatan_tinggi", "pengalaman_investasi_tinggi"],
+    "THEN": "alokasi_lebih_besar_pada_saham_dan_reksa_dana_saham",
+    "CF": 0.9
   }
 }
 
