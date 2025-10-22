@@ -55,23 +55,24 @@
       },
     "CF": 1.0
   },
-  "IF": [
-        "profil_risiko == 'Moderat'",
-        "AND",
-        "tujuan_finansial == 'Jangka Panjang'",
-        "AND",
-        "usia <= 55"
-      ],
-      "THEN": {
-        "Rekomendasi": "Alokasi Moderat Jangka Panjang (Balanced)",
-        "Alokasi": {
-          "Reksa Dana Saham": "40%",
-          "Reksa Dana Pendapatan Tetap": "50%",
-          "Emas": "10%"
+  "R4": {
+    "IF": [
+          "profil_risiko == 'Moderat'",
+          "AND",
+          "tujuan_finansial == 'Jangka Panjang'",
+          "AND",
+          "usia <= 55"
+        ],
+        "THEN": {
+          "Rekomendasi": "Alokasi Moderat Jangka Panjang (Balanced)",
+          "Alokasi": {
+            "Reksa Dana Saham": "40%",
+            "Reksa Dana Pendapatan Tetap": "50%",
+            "Emas": "10%"
+          },
+          "Penjelasan": "Alokasi 'Balanced' (Seimbang) klasik ini sangat cocok untuk profil Moderat dan Horison Jangka Panjang Anda. Alokasi 40% Saham dan 50% Pendapatan Tetap ini menyeimbangkan dua tujuan utama Anda: 40% pada Saham berfungsi sebagai mesin pertumbuhan (Growth), sementara 50% pada Pendapatan Tetap memberikan stabilitas (Stability) pada portofolio Anda."
         },
-        "Penjelasan": "Alokasi 'Balanced' (Seimbang) klasik ini sangat cocok untuk profil Moderat dan Horison Jangka Panjang Anda. Alokasi 40% Saham dan 50% Pendapatan Tetap ini menyeimbangkan dua tujuan utama Anda: 40% pada Saham berfungsi sebagai mesin pertumbuhan (Growth), sementara 50% pada Pendapatan Tetap memberikan stabilitas (Stability) pada portofolio Anda."
-      },
-  "CF": 1.0
+    "CF": 1.0
   },
   "R5": {
     "IF": [
@@ -151,4 +152,5 @@
         "Penjelasan": "Ini adalah fakta legal berdasarkan regulasi di Indonesia. Untuk membuka rekening investasi dan mendapatkan identitas investor (SID) secara resmi, Anda memerlukan KTP (Kartu Tanda Penduduk), yang umumnya diperoleh pada usia 17 tahun. Karena usia Anda di bawah 17 tahun, Anda adalah 'investor muda' tetapi memerlukan bantuan Orang Tua/Wali untuk membuka rekening atas nama mereka."
       },
     "CF": 1.0
+  }
 }
