@@ -23,5 +23,26 @@
     "IF": ["profil_konservatif", "tujuan_jangka_pendek"],
     "THEN": "alokasi_portofolio_dominan_obligasi_dan_kas",
     "CF": 0.9
+  },
+  "R6": {
+    "IF": ["profil_agresif", "tujuan_jangka_panjang"],
+    "THEN": "diversifikasi_ke_saham_domestik_dan_internasional",
+    "CF": 0.9
+  },
+  "R7": {
+    "IF": ["profil_moderat", "tujuan_jangka_menengah"],
+    "THEN": "diversifikasi_antara_saham_dan_obligasi",
+    "CF": 0.85
+  },
+  "R8": {
+    "IF": ["profil_konservatif", "tujuan_jangka_pendek"],
+    "THEN": "diversifikasi_pada_obligasi_dan_deposito",
+    "CF": 0.95
+  },
+  "R9": {
+    "IF": ["profil_agresif", "pendapatan_tinggi"],
+    "THEN": "alokasikan_sebagian_portofolio_ke_aset_alternatif_seperti_emas_atau_reksa_dana_internasional",
+    "CF": 0.8
   }
 }
+
