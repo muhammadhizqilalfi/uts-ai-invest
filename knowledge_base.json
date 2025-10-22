@@ -1,0 +1,17 @@
+{
+  "R1": {
+    "IF": ["profil_agresif", "tujuan_jangka_panjang"],
+    "THEN": "alokasi_saham_tinggi",
+    "CF": 0.9
+  },
+  "R2": {
+    "IF": ["profil_moderat", "tujuan_jangka_menengah"],
+    "THEN": "alokasi_reksadana_campuran",
+    "CF": 0.8
+  },
+  "R3": {
+    "IF": ["profil_konservatif", "tujuan_jangka_pendek"],
+    "THEN": "alokasi_obligasi_dan_deposito",
+    "CF": 0.95
+  }
+}
