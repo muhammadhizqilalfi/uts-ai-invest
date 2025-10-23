@@ -55,7 +55,8 @@ def forward_chaining(user_data, file_path="knowledge_base.json"):
             results.append({
                 "rule": rule_id,
                 "rekomendasi": rule["THEN"].get("Rekomendasi", ""),
-                "penjelasan": rule["THEN"].get("Penjelasan", "")
+                "penjelasan": rule["THEN"].get("Penjelasan", ""),
+                "alokasi" : rule["THEN"].get("alokasi", None)
             })
 
         else:
