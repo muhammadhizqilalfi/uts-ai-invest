@@ -159,3 +159,9 @@ if __name__ == "__main__":
     for r in hasil["results"]:
         print(f"[{r['rule']}] {r['rekomendasi']}")
         print(f"→ {r['penjelasan']}\n")
+
+        if r.get("alokasi"):
+            print("Alokasi aset yang disarankan: ")
+            for aset, persen in r["alokasi"].items():
+                print(f"    - {aset}: {persen}")
+        print()
