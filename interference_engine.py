@@ -56,7 +56,7 @@ def forward_chaining(user_data, file_path="knowledge_base.json"):
                 "rule": rule_id,
                 "rekomendasi": rule["THEN"].get("Rekomendasi", ""),
                 "penjelasan": rule["THEN"].get("Penjelasan", ""),
-                "alokasi" : rule["THEN"].get("alokasi", None)
+                "alokasi" : rule["THEN"].get("Alokasi", None)
             })
 
         else:
@@ -157,11 +157,12 @@ if __name__ == "__main__":
 
     print("=== HASIL REKOMENDASI ===\n")
     for r in hasil["results"]:
-        print(f"[{r['rule']}] {r['rekomendasi']}")
-        print(f"→ {r['penjelasan']}\n")
-
+        print(f"[{r['rule']}] {r['rekomendasi']}\n")
+        
         if r.get("alokasi"):
             print("Alokasi aset yang disarankan: ")
             for aset, persen in r["alokasi"].items():
                 print(f"    - {aset}: {persen}")
         print()
+        
+        print(f"→ {r['penjelasan']}\n")
