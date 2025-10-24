@@ -25,7 +25,7 @@ def check_rule(conditions, facts):
 
     return result
 
-def forward_chaining(user_data, file_path="knowledge_base.json"):
+def forward_chaining(user_data, file_path="../knowledge_base/knowledge_base.json"):
     """Proses utama forward chaining"""
     rules = load_knowledge_base(file_path)
     working_memory = user_data.copy()
@@ -35,11 +35,11 @@ def forward_chaining(user_data, file_path="knowledge_base.json"):
     print(f"Working Memory Awal: {working_memory}\n")
 
     for rule_id, rule in rules.items():
-        print(f"🔍 Mengevaluasi {rule_id}...")
+        print(f" Mengevaluasi {rule_id}...")
         cocok = check_rule(rule["IF"], working_memory)
 
         if cocok:
-            print(f"✅ {rule_id} terpenuhi → {rule['THEN'].get('Rekomendasi')}\n")
+            print(f" {rule_id} terpenuhi → {rule['THEN'].get('Rekomendasi')}\n")
 
             for k, v in rule["THEN"].items():
                 if k not in working_memory:
@@ -68,24 +68,24 @@ def tampilkan_hasil_rekomendasi(results):
     print("=== HASIL REKOMENDASI INVESTASI ===\n")
 
     if not results:
-        print("❌ Tidak ditemukan rekomendasi yang sesuai dengan data Anda.\n")
+        print(" Tidak ditemukan rekomendasi yang sesuai dengan data Anda.\n")
         return
 
     # Ambil 1 hasil utama
     utama = results[0]
 
-    print("🏆 Berdasarkan profil dan tujuan Anda, sistem merekomendasikan:")
-    print(f"➡️  {utama['rekomendasi']}\n")
+    print(" Berdasarkan profil dan tujuan Anda, sistem merekomendasikan:")
+    print(f"  {utama['rekomendasi']}\n")
     if utama.get("alokasi"):
-        print("💰 Rencana alokasi aset yang disarankan:")
+        print(" Rencana alokasi aset yang disarankan:")
         for aset, persen in utama["alokasi"].items():
             print(f"   • {aset}: {persen}")
-    print(f"\n📖 Penjelasan:\n{utama['penjelasan']}\n")
+    print(f"\n Penjelasan:\n{utama['penjelasan']}\n")
 
     # Ambil maksimal 2 hasil pendukung (CF > 0.7)
     pendukung = [r for r in results[1:] if r["cf"] >= 0.7][:2]
     if pendukung:
-        print("💬 Catatan & Pertimbangan Tambahan:\n")
+        print(" Catatan & Pertimbangan Tambahan:\n")
         for r in pendukung:
             print(f"• {r['rekomendasi']}")
             print(f"  {r['penjelasan']}\n")
