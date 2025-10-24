@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+html, body {
+  height: 100%;
+  background-color: #0a0f0d;
+  color: #e6edf3;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Outline text murni tanpa glow */
+.stroke-text {
+  -webkit-text-stroke: 1.5px #00A884;
+  color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00A884;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0a0f0d;
+}
+
