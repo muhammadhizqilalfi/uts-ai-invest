@@ -164,15 +164,4 @@ def get_user_input_cli():
 if __name__ == "__main__":
     user_data = get_user_input_cli()
     hasil = forward_chaining(user_data)
-
-    print("=== HASIL REKOMENDASI ===\n")
-    for r in hasil["results"]:
-        print(f"[{r['rule']}] {r['rekomendasi']}\n")
-        
-        if r.get("alokasi"):
-            print("Alokasi aset yang disarankan: ")
-            for aset, persen in r["alokasi"].items():
-                print(f"    - {aset}: {persen}")
-        print()
-        
-        print(f"→ {r['penjelasan']}\n")
+    tampilkan_hasil_rekomendasi(hasil)
