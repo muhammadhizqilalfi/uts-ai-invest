@@ -1,7 +1,7 @@
 import json
 import re
 
-def load_knowledge_base(file_path="knowledge_base.json"):
+def load_knowledge_base(file_path="../knowledge_base/knowledge_base.json"):
     """Baca knowledge base dari file JSON"""
     with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
