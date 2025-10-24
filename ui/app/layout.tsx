@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "../app/globals.css";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Investox - Sistem Pakar Alokasi Aset Investasi",
+  title: "FinWise - Sistem Pakar Alokasi Aset Investasi",
   description: "Sistem pakar untuk menentukan alokasi aset investasi berdasarkan profil risiko dan tujuan finansial pengguna.",
 };
 
