@@ -165,3 +165,4 @@ if __name__ == "__main__":
     user_data = get_user_input_cli()
     hasil = forward_chaining(user_data)
     tampilkan_hasil_rekomendasi(hasil)
+ 
