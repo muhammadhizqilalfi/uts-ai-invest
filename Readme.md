@@ -7,15 +7,13 @@
   </a>
 </p>
 
-### Deskripsi
----
+## Deskripsi
 
 FinWise adalah sistem pakar berbasis web yang memberikan rekomendasi alokasi aset investasi berdasarkan profil pengguna seperti usia, profil risiko, tujuan finansial, pengalaman, dan pendapatan yang dapat diinvestasikan.
 Proyek ini menggabungkan FastAPI (Python) sebagai inference engine dan Next.js + TypeScript (React) sebagai antarmuka pengguna (frontend).
 
 
-### Alur Data
----
+## Alur Data
 
 1. Pengguna mengisi profil (usia, profil risiko, tujuan, dsb) di halaman web.
 
@@ -25,8 +23,7 @@ Proyek ini menggabungkan FastAPI (Python) sebagai inference engine dan Next.js +
 
 4. Frontend menampilkan hasil dalam bentuk kartu rekomendasi dan penjelasan.
 
-### Cara Menjalankan
----
+## Cara Menjalankan
 
 1. Clone Repository
 
@@ -34,7 +31,6 @@ Proyek ini menggabungkan FastAPI (Python) sebagai inference engine dan Next.js +
     git clone https://github.com/muhammadhizqilalfi/uts-ai-invest.git
     cd uts-ai-invest 
     ```
-    ---
 
 2. Jalankan Backend (FastAPI)
 
@@ -59,7 +55,6 @@ Proyek ini menggabungkan FastAPI (Python) sebagai inference engine dan Next.js +
     Server akan berjalan di:
     http://localhost:8000
 
-    ---
 
 3. Jalankan Frontend
 
