@@ -28,7 +28,7 @@ export default function Inferen() {
     profil_risiko: "",
     tujuan_finansial: "",
     status_investor: "",
-    investable_income: "200000",
+    investable_income: "",
   });
 
   const [result, setResult] = useState<ResultType | null>(null);
@@ -45,7 +45,7 @@ export default function Inferen() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:8000/interference", {
+      const res = await fetch("http://localhost:8000/inferen", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

@@ -21,7 +21,7 @@ class UserInput(BaseModel):
     status_investor: str
     investable_income: int
 
-@app.post("/interference")
+@app.post("/inferen")
 def inferensi(data: UserInput):
     hasil = forward_chaining(data.dict())
-    return hasil
+    return {"results": hasil}
