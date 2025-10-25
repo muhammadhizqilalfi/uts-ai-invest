@@ -1,5 +1,4 @@
 <h1 align="center">FinWise</h1>
-<hr>
 
 <p align="center">
   <a href="https://skillicons.dev">
